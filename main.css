@@ -18,6 +18,8 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background-color: #012443;
+  overflow: hidden;
 }
 
 h2,
@@ -42,21 +44,72 @@ h3 {
 
 .card-container .top-part {
   width: 100%;
-  height: 50px;
+  padding: 10px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-transition: all 0.5s linear;
   transition: all 0.5s linear;
   position: absolute;
   left: 0;
   top: -80px;
+}
+
+.card-container .top-part h2 {
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+
+.card-container .top-part .description {
+  width: 100%;
+  height: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-transition: 0.5s linear;
+  transition: 0.5s linear;
+  overflow: hidden;
+}
+
+.card-container .top-part .description div {
+  cursor: pointer;
+}
+
+.card-container .top-part .description div h4,
+.card-container .top-part .description div p {
+  text-align: center;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+}
+
+.card-container .top-part .description div:hover h4,
+.card-container .top-part .description div:hover p {
+  color: #ff6b6b;
+  letter-spacing: 1px;
+}
+
+.card-container .top-part:hover h2 {
+  color: #ff6b6b;
+}
+
+.card-container .top-part:hover .description {
+  height: 50px;
 }
 
 .card-container .bottom-part {
@@ -76,31 +129,44 @@ h3 {
           flex-direction: column;
   -webkit-transition: all 0.5s linear;
   transition: all 0.5s linear;
-  -webkit-transition-delay: 1.5s;
-          transition-delay: 1.5s;
+  -webkit-transition-delay: 1.3s;
+          transition-delay: 1.3s;
   position: absolute;
   left: 0;
-  bottom: -80px;
+  bottom: -70px;
+}
+
+.card-container .bottom-part h3 {
+  -webkit-transition: 0.5s linear;
+  transition: 0.5s linear;
 }
 
 .card-container .bottom-part .icons i:nth-child(1) {
   -webkit-transition-delay: 0.25s;
           transition-delay: 0.25s;
+  -webkit-animation-delay: 0.25s;
+          animation-delay: 0.25s;
 }
 
 .card-container .bottom-part .icons i:nth-child(2) {
   -webkit-transition-delay: 0.5s;
           transition-delay: 0.5s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
 }
 
 .card-container .bottom-part .icons i:nth-child(3) {
   -webkit-transition-delay: 0.75s;
           transition-delay: 0.75s;
+  -webkit-animation-delay: 0.75s;
+          animation-delay: 0.75s;
 }
 
 .card-container .bottom-part .icons i:nth-child(4) {
   -webkit-transition-delay: 1s;
           transition-delay: 1s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 
 .card-container .bottom-part .icons {
@@ -118,8 +184,8 @@ h3 {
 }
 
 .card-container .bottom-part .icons i {
-  -webkit-transition: 0.8s linear;
-  transition: 0.8s linear;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
   font-size: 20px;
   -webkit-transform: translateY(60px);
           transform: translateY(60px);
@@ -128,6 +194,8 @@ h3 {
 .card-container .bottom-part .icons i:hover {
   cursor: pointer;
   color: #ff6b6b;
+  -webkit-transform: scale(1.4) !important;
+          transform: scale(1.4) !important;
 }
 
 .card-container .bottom-part:hover .icons i {
@@ -156,5 +224,20 @@ h3 {
 .card-container:hover .bottom-part .icons i {
   -webkit-transform: translateY(0);
           transform: translateY(0);
+}
+
+#mouse-move {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #ff6b6ba8;
+  -webkit-box-shadow: 0 0 10px #ff6b6ba8;
+          box-shadow: 0 0 10px #ff6b6ba8;
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 /*# sourceMappingURL=main.css.map */
