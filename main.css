@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+h2,
+h3 {
+  cursor: default;
+  text-align: center;
+}
+
+.card-container {
+  width: 280px;
+  height: 380px;
+  position: relative;
+  border-radius: 20px;
+  color: #fff;
+  padding: 20px;
+  overflow: hidden;
+  background: url("woman.jpg") center;
+  background-size: cover;
+  -webkit-box-shadow: 0 0 5px #333;
+          box-shadow: 0 0 5px #333;
+}
+
+.card-container .top-part {
+  width: 100%;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+  position: absolute;
+  left: 0;
+  top: -80px;
+}
+
+.card-container .bottom-part {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+  -webkit-transition-delay: 1.5s;
+          transition-delay: 1.5s;
+  position: absolute;
+  left: 0;
+  bottom: -80px;
+}
+
+.card-container .bottom-part .icons i:nth-child(1) {
+  -webkit-transition-delay: 0.25s;
+          transition-delay: 0.25s;
+}
+
+.card-container .bottom-part .icons i:nth-child(2) {
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+.card-container .bottom-part .icons i:nth-child(3) {
+  -webkit-transition-delay: 0.75s;
+          transition-delay: 0.75s;
+}
+
+.card-container .bottom-part .icons i:nth-child(4) {
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+}
+
+.card-container .bottom-part .icons {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin: 10px 0;
+}
+
+.card-container .bottom-part .icons i {
+  -webkit-transition: 0.8s linear;
+  transition: 0.8s linear;
+  font-size: 20px;
+  -webkit-transform: translateY(60px);
+          transform: translateY(60px);
+}
+
+.card-container .bottom-part .icons i:hover {
+  cursor: pointer;
+  color: #ff6b6b;
+}
+
+.card-container .bottom-part:hover .icons i {
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
+.card-container .top-part,
+.card-container .bottom-part {
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+}
+
+.card-container:hover .top-part {
+  top: 0;
+}
+
+.card-container:hover .bottom-part {
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+  bottom: 0;
+}
+
+.card-container:hover .bottom-part .icons i {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+/*# sourceMappingURL=main.css.map */
